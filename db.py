@@ -13,3 +13,5 @@ engine = sqlalchemy.create_engine("sqlite:///sqlite.db",convert_unicode=True,ech
 class MainMata(ormar.ModelMeta):
     metadata = metadata
     database = database
+
+

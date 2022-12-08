@@ -1,7 +1,9 @@
 from fastapi import APIRouter
 from starlette.responses import FileResponse
 
+
 from . import schemas, services
+
 
 
 pdf = APIRouter()
@@ -15,6 +17,7 @@ async def doc_create(doc: schemas.Doc):
 @pdf.get('/{pk}')
 async def create_pdf(pk: int):
     return FileResponse(await services.create_pdf(pk))
+
 
 
 
