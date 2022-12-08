@@ -11,6 +11,9 @@ db.sqlite3
 sqlite.db
 venv
 
+.vs/
+.vs
+
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
