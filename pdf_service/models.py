@@ -4,7 +4,7 @@ from db import MainMata
 
 class Doc(ormar.Model):
     class Meta(MainMata):
-        tablename="data"
+        pass
 
     id = ormar.Integer(primary_key=True)
     title = ormar.String(max_length=30)

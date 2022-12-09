@@ -3,9 +3,9 @@ from starlette.responses import FileResponse
 
 
 from typing import List, Optional
-from . import schemas, services
+from . import schemas, services,models
 
-
+from pdf_service.models import Doc
 
 
 pdf = APIRouter()
@@ -22,7 +22,7 @@ async def create_pdf(pk: int):
 
 @pdf.get('/',response_model=List[schemas.Doc])
 async def get_all():
-    data = await schemas.Doc.objects.filter().all()
+    data = await Doc.objects.filter().all()
     return data
 
 
